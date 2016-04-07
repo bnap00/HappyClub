@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+.disc:first-letter {
+    font-size: 170%; float: left; margin: 5px 5px 0 0; line-height: 0.8;;
+    text-shadow: 1px 1px 0 #566074, 7px 7px 0 #fff;
+}
+.timestamp
+{
+    font-style: italic;
+}

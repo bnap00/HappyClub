@@ -1,0 +1,49 @@
+<ion-view view-title="News And Events">
+  <ion-content>
+      <h1>Events</h1>
+      <ion-list ng-if="newsLength>0">
+              
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="event in events" type="item-text-wrap" href="#/tab/events/{{event.EventID}}"> 
+        <h2>{{event.EventName}}</h2>
+        <p>{{event.Title}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+      <ion-list ng-if="!loaded">
+              
+      <ion-item class="item-remove-animate item-icon-right">
+       
+        <h2>Error Loading Details</h2>
+        <p>Check Your Internet Connection. Or Contact Application Provider</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+      
+      
+      
+      
+      <h1>News</h1>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="news in newsList" type="item-text-wrap" href="#/tab/chats/{{news.NewsID}}">
+          
+        <h2>{{news.Title}}</h2>
+        <p>{{news.shortDesc}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+      
+      <ion-item ng-if="!loaded" class="item-remove-animate item-icon-right">
+       
+        <h2>Error Loading Details</h2>
+        <p>Check Your Internet Connection. Or Contact Application Provider</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+      
+      
+      
+  </ion-content>
+</ion-view>
+<div ng-if="error" class="loading-news" ng-class="{ 'clear': error}">
+      {{error_message}}
+    </div>
